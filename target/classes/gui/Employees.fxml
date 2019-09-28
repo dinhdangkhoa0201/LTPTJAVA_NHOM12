@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="employees" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="496.0" prefWidth="1089.0" stylesheets="@../main/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXTextField layoutX="674.0" layoutY="29.0" prefHeight="44.0" prefWidth="314.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="328.0" layoutY="14.0" prefHeight="40.0" prefWidth="40.0" text=" " />
+      <ScrollPane layoutY="93.0" prefHeight="403.0" prefWidth="1089.0">
+         <content>
+            <TableView prefHeight="412.0" prefWidth="1089.0">
+               <columns>
+                  <TableColumn fx:id="col_manv" editable="false" prefWidth="75.0" resizable="false" sortable="false" text="MÃ NV" />
+                  <TableColumn fx:id="col_hoten" prefWidth="246.0" resizable="false" text="HỌ TÊN" />
+                  <TableColumn fx:id="col_gioitinh" prefWidth="103.0" resizable="false" text="GIỚI TÍNH" />
+                  <TableColumn fx:id="col_ngaysinh" prefWidth="112.0" resizable="false" text="NGÀY SINH" />
+                  <TableColumn fx:id="col_email" prefWidth="251.0" resizable="false" text="EMAIL" />
+                  <TableColumn fx:id="col_sdt" prefWidth="124.0" resizable="false" text="SỐ ĐIỆN THOẠI" />
+                  <TableColumn fx:id="col_diachi" prefWidth="177.0" text="ĐỊA CHỈ" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="1004.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/search.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="14.0" layoutY="74.0" prefHeight="1.0" prefWidth="604.0" />
+      <Label layoutX="14.0" layoutY="28.0" text="Employees">
+         <font>
+            <Font name="Bookman Old Style" size="32.0" />
+         </font>
+      </Label>
+   </children>
+   <padding>
+      <Insets right="50.0" />
+   </padding>
+</AnchorPane>
