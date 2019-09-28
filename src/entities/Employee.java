@@ -2,14 +2,49 @@ package entities;
 
 import java.time.LocalDate;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+@Entity
 public class Employee {
+	@Id
+	@GeneratedValue
+	@Column(name = "MaNV")
 	private String maNV;
+	
+	@Column(name = "HoNV")
 	private String hoNV;
+	
+	@Column(name = "TenNV")
 	private String tenNV;
+	
+	@Column(name = "GioiTinh")
 	private String gioiTinh;
+	
+	@Column(name = "NgaySinh")
 	private LocalDate ngaySinh;
+	
+	@Column(name = "Email")
 	private String email;
+	
+	@Column(name = "DiaChi")
 	private String diaChi;
+	
+	@OneToOne(mappedBy = "employee", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = false)
+	private User user;
+	
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
 	public Employee(String maNV, String hoNV, String tenNV, String gioiTinh, LocalDate ngaySinh, String email,
 			String diaChi) {
 		super();

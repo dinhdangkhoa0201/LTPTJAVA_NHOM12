@@ -46,3 +46,8 @@
     -fx-border-color: transparent; /* Vertical Lines*/
     -fx-border-width: 1;
 }
+
+.text {
+	-fx-alignment: center;
+	-fx-font-family: "Times New Roman";
+}
