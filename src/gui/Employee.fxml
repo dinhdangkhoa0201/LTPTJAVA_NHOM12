@@ -3,8 +3,6 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -13,41 +11,58 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="employees" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="496.0" prefWidth="1089.0" stylesheets="@../main/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="792.0" prefWidth="1630.0" stylesheets="@../main/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.EmployeesControl">
    <children>
-      <JFXTextField layoutX="674.0" layoutY="29.0" prefHeight="44.0" prefWidth="314.0">
+      <JFXTextField layoutX="1213.0" layoutY="32.0" prefHeight="44.0" prefWidth="353.0">
          <font>
             <Font size="20.0" />
          </font>
       </JFXTextField>
       <JFXButton layoutX="328.0" layoutY="14.0" prefHeight="40.0" prefWidth="40.0" text=" " />
-      <ScrollPane layoutY="93.0" prefHeight="403.0" prefWidth="1089.0">
-         <content>
-            <TableView prefHeight="412.0" prefWidth="1089.0">
-               <columns>
-                  <TableColumn fx:id="col_manv" editable="false" prefWidth="75.0" resizable="false" sortable="false" text="MÃ NV" />
-                  <TableColumn fx:id="col_hoten" prefWidth="246.0" resizable="false" text="HỌ TÊN" />
-                  <TableColumn fx:id="col_gioitinh" prefWidth="103.0" resizable="false" text="GIỚI TÍNH" />
-                  <TableColumn fx:id="col_ngaysinh" prefWidth="112.0" resizable="false" text="NGÀY SINH" />
-                  <TableColumn fx:id="col_email" prefWidth="251.0" resizable="false" text="EMAIL" />
-                  <TableColumn fx:id="col_sdt" prefWidth="124.0" resizable="false" text="SỐ ĐIỆN THOẠI" />
-                  <TableColumn fx:id="col_diachi" prefWidth="177.0" text="ĐỊA CHỈ" />
-               </columns>
-            </TableView>
-         </content>
-      </ScrollPane>
-      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="1004.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/search.png" />
-         </image>
-      </ImageView>
       <Separator layoutX="14.0" layoutY="74.0" prefHeight="1.0" prefWidth="604.0" />
-      <Label layoutX="14.0" layoutY="28.0" text="Employees">
+      <JFXButton layoutX="1566.0" layoutY="14.0" prefHeight="50.0" prefWidth="50.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/search.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXTextField accessibleRole="TEXT" layoutX="15.0" layoutY="9.0" prefColumnCount="6" text="Employees" unFocusColor="WHITE">
          <font>
-            <Font name="Bookman Old Style" size="32.0" />
+            <Font size="38.0" />
          </font>
-      </Label>
+      </JFXTextField>
+      <JFXButton fx:id="btnAdd" layoutX="671.0" layoutY="25.0" onMouseClicked="#handleButtonAction" prefHeight="50.0" prefWidth="100.0" text=" " AnchorPane.leftAnchor="670.0" AnchorPane.topAnchor="25.0">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/add.png" />
+               </image></ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="924.0" layoutY="25.0" prefHeight="50.0" prefWidth="100.0" text=" " AnchorPane.leftAnchor="910.0">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/update.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <TableView fx:id="tableEmployees" layoutX="1.0" layoutY="90.0" prefHeight="700.0" prefWidth="1629.0">
+         <columns>
+            <TableColumn fx:id="col_manv" editable="false" prefWidth="109.00003051757812" resizable="false" sortable="false" text="MÃ NV" />
+            <TableColumn fx:id="col_ho" prefWidth="242.0" resizable="false" text="HỌ" />
+            <TableColumn fx:id="col_ten" prefWidth="188.0" resizable="false" text="TÊN" />
+            <TableColumn fx:id="col_gioitinh" prefWidth="134.0" resizable="false" text="GIỚI TÍNH" />
+            <TableColumn fx:id="col_ngaysinh" prefWidth="165.0" resizable="false" text="NGÀY SINH" />
+            <TableColumn fx:id="col_email" prefWidth="281.0" resizable="false" text="EMAIL" />
+            <TableColumn fx:id="col_sdt" prefWidth="167.0" resizable="false" text="SỐ ĐIỆN THOẠI" />
+            <TableColumn fx:id="col_diachi" prefWidth="341.0" text="ĐỊA CHỈ" />
+         </columns>
+      </TableView>
    </children>
    <padding>
       <Insets right="50.0" />

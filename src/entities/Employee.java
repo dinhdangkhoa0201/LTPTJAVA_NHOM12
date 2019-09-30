@@ -33,6 +33,9 @@ public class Employee {
 	@Column(name = "Email")
 	private String email;
 	
+	@Column(name = "SDT")
+	private String sdt;
+	
 	@Column(name = "DiaChi")
 	private String diaChi;
 	
@@ -45,8 +48,10 @@ public class Employee {
 	public void setUser(User user) {
 		this.user = user;
 	}
+	
+	
 	public Employee(String maNV, String hoNV, String tenNV, String gioiTinh, LocalDate ngaySinh, String email,
-			String diaChi) {
+			String sdt, String diaChi) {
 		super();
 		this.maNV = maNV;
 		this.hoNV = hoNV;
@@ -54,6 +59,7 @@ public class Employee {
 		this.gioiTinh = gioiTinh;
 		this.ngaySinh = ngaySinh;
 		this.email = email;
+		this.sdt = sdt;
 		this.diaChi = diaChi;
 	}
 	public Employee() {
@@ -94,6 +100,12 @@ public class Employee {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public String getSdt() {
+		return sdt;
+	}
+	public void setSdt(String sdt) {
+		this.sdt = sdt;
 	}
 	public String getDiaChi() {
 		return diaChi;

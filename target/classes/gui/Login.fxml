@@ -27,12 +27,12 @@
             </Pane>
          </children>
       </Pane>
-      <JFXTextField fx:id="txtUser" layoutX="584.0" layoutY="126.0" prefHeight="50.0" prefWidth="370.0" promptText="email" text="KhoaCyruss">
+      <JFXTextField fx:id="txtUser" layoutX="572.0" layoutY="126.0" prefHeight="50.0" prefWidth="370.0" promptText="email" text="khoacyruss">
          <font>
             <Font size="25.0" />
          </font>
       </JFXTextField>
-      <Label layoutX="573.0" layoutY="360.0" text="Forgot Password?" textFill="#1100ffba">
+      <Label layoutX="826.0" layoutY="300.0" text="Forgot Password?" textFill="#1100ffba">
          <font>
             <Font size="15.0" />
          </font>
@@ -40,7 +40,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <JFXButton fx:id="btnSignIn" layoutX="756.0" layoutY="347.0" onMouseClicked="#handleButtonAction" prefHeight="46.0" prefWidth="190.0" ripplerFill="RED" text="Sign in" textFill="#f20000">
+      <JFXButton fx:id="btnSignIn" layoutX="572.0" layoutY="347.0" onMouseClicked="#handleButtonAction" prefHeight="50.0" prefWidth="370.0" ripplerFill="RED" text="Sign in" textFill="#f20000">
          <font>
             <Font size="25.0" />
          </font>
@@ -52,20 +52,30 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <JFXButton fx:id="btnSignUp" layoutX="573.0" layoutY="472.0" onMouseClicked="#handleButtonAction" prefHeight="46.0" prefWidth="373.0" text="Sign up" textFill="#76ff9d">
+      <JFXButton fx:id="btnSignUp" layoutX="575.0" layoutY="470.0" onMouseClicked="#handleButtonAction" prefHeight="50.0" prefWidth="370.0" text="Sign up" textFill="#76ff9d">
          <font>
             <Font size="25.0" />
          </font>
       </JFXButton>
-      <Label layoutX="666.0" layoutY="14.0" text="Login" textFill="#1500db">
+      <Label layoutX="645.0" layoutY="14.0" text="Login" textFill="#1500db">
          <font>
             <Font name="VNI-Helve-Bold" size="64.0" />
          </font>
       </Label>
-      <JFXPasswordField fx:id="txtPassword" layoutX="583.0" layoutY="250.0" prefHeight="50.0" prefWidth="370.0" promptText="password" text="025825273a">
+      <JFXPasswordField fx:id="txtPassword" layoutX="572.0" layoutY="211.0" prefHeight="50.0" prefWidth="370.0" promptText="password" text="123456">
          <font>
             <Font size="25.0" />
          </font>
       </JFXPasswordField>
+      <Label fx:id="lblError" layoutX="575.0" layoutY="282.0" />
+      <JFXButton fx:id="btnCloseWindown" layoutX="934.0" layoutY="14.0" onMouseClicked="#handleButtonAction" prefHeight="50.0" prefWidth="50.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/closewindown.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
    </children>
 </AnchorPane>

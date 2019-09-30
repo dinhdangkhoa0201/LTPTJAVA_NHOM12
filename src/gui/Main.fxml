@@ -3,7 +3,6 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -12,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="main" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../main/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.MainControl">
+<AnchorPane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../main/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.MainControl">
    <children>
       <Pane prefHeight="193.0" prefWidth="1920.0" styleClass="head-background">
          <children>
@@ -21,6 +20,15 @@
                   <Font name="Cambria Math" size="39.0" />
                </font>
             </Label>
+            <JFXButton fx:id="btnCloseWindown" layoutX="1854.0" layoutY="14.0" onMouseClicked="#handleButtonAction" prefHeight="50.0" prefWidth="50.0" text=" ">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/closewindown.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
          </children>
       </Pane>
       <VBox layoutY="189.0" prefHeight="665.0" prefWidth="290.0">
@@ -98,7 +106,7 @@
                   <Insets left="10.0" />
                </padding>
             </Label>
-            <JFXButton fx:id="btnEmployees" alignment="BASELINE_LEFT" onAction="#employees" prefHeight="56.0" prefWidth="360.0" ripplerFill="#e732ffe0" text="Emplyees">
+            <JFXButton fx:id="btnEmployee" alignment="BASELINE_LEFT" onMouseClicked="#handleButtonAction" prefHeight="56.0" prefWidth="360.0" ripplerFill="#e732ffe0" text="Emplyees">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -113,7 +121,7 @@
                   <Insets left="80.0" />
                </padding>
             </JFXButton>
-            <JFXButton fx:id="btnProfile" alignment="BASELINE_LEFT" onAction="#profile" prefHeight="56.0" prefWidth="360.0" ripplerFill="#e732ffe0" text="Profile">
+            <JFXButton fx:id="btnProfile" alignment="BASELINE_LEFT" onMouseClicked="#handleButtonAction" prefHeight="56.0" prefWidth="360.0" ripplerFill="#e732ffe0" text="Profile">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -157,6 +165,6 @@
             </ImageView>
          </children>
       </Pane>
-      <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" layoutX="286.0" layoutY="288.0" prefHeight="665.0" prefWidth="1635.0" />
+      <AnchorPane fx:id="center" layoutX="290.0" layoutY="289.0" prefHeight="792.0" prefWidth="1630.0" />
    </children>
 </AnchorPane>

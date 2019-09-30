@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.AddEmployeeControl">
+   <children>
+      <Pane layoutX="236.0" layoutY="14.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icon.jpg" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane layoutX="78.0" layoutY="189.0" />
+      <VBox layoutX="78.0" layoutY="189.0" prefHeight="439.0" prefWidth="50.0">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/nameEmp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/gender.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../img/birthday.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../img/email.png" />
+               </image></ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../img/phone.png" />
+               </image></ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../img/address.png" />
+               </image></ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </VBox>
+      <VBox layoutX="142.0" layoutY="189.0" prefHeight="439.0" prefWidth="432.0">
+         <children>
+            <JFXTextField prefHeight="50.0" prefWidth="432.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox prefHeight="50.0" prefWidth="150.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXComboBox>
+            <JFXDatePicker defaultColor="#0c00f7cd" prefHeight="50.0" showWeekNumbers="true">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXDatePicker>
+            <JFXTextField prefHeight="50.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField layoutX="10.0" layoutY="190.0" prefHeight="50.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField layoutX="10.0" layoutY="250.0" prefHeight="50.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+         </children></VBox>
+      <JFXButton fx:id="btnCloseWindown" layoutX="522.0" layoutY="14.0" onMouseClicked="#handleButtonAction" prefHeight="50.0" prefWidth="50.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/closewindown.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <HBox layoutX="100.0" layoutY="621.0" prefHeight="50.0" prefWidth="400.0">
+         <children>
+            <JFXButton fx:id="btnRemove" onMouseClicked="#handleButtonAction" prefHeight="50.0" prefWidth="150.0" text=" ">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/minus.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnUpdate" layoutX="10.0" layoutY="10.0" onMouseClicked="#handleButtonAction" prefHeight="50.0" prefWidth="150.0" text=" ">
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/update.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

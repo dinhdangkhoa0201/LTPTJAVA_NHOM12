@@ -8,72 +8,72 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="profile" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="759.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="profile" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="792.0" prefWidth="1630.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ProfileControl">
    <children>
-      <Separator layoutX="14.0" layoutY="69.0" prefHeight="22.0" prefWidth="727.0" />
-      <Label layoutX="14.0" layoutY="29.0" prefHeight="17.0" text="My Profile">
-         <font>
-            <Font name="Book Antiqua" size="32.0" />
-         </font>
-      </Label>
-      <Label layoutX="90.0" layoutY="102.0" text="First Name : " AnchorPane.bottomAnchor="362.0" AnchorPane.topAnchor="100.0">
+      <Separator layoutX="14.0" layoutY="72.0" prefHeight="22.0" prefWidth="727.0" />
+      <Label layoutX="130.0" layoutY="150.0" prefHeight="25.0" prefWidth="106.0" styleClass="profile" stylesheets="@../main/application.css" text="First Name : " AnchorPane.bottomAnchor="617.0" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="150.0">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="190.0" layoutY="91.0" prefHeight="25.0" prefWidth="171.0" AnchorPane.bottomAnchor="362.0">
+      <JFXTextField layoutX="250.0" layoutY="120.0" prefHeight="39.0" prefWidth="265.0" AnchorPane.bottomAnchor="603.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="150.0">
          <font>
             <Font size="18.0" />
          </font>
       </JFXTextField>
-      <Label layoutX="399.0" layoutY="104.0" text="Last Name : " AnchorPane.bottomAnchor="361.0" AnchorPane.topAnchor="100.0">
+      <Label layoutX="536.0" layoutY="150.0" prefHeight="25.0" prefWidth="103.0" styleClass="profile" stylesheets="@../main/application.css" text="Last Name : " AnchorPane.bottomAnchor="617.0" AnchorPane.topAnchor="150.0">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="499.0" layoutY="92.0" prefHeight="25.0" prefWidth="171.0" AnchorPane.bottomAnchor="361.0" AnchorPane.rightAnchor="89.0">
+      <Label layoutX="536.0" layoutY="181.0" styleClass="profile" stylesheets="@../main/application.css" text="Birthday : " AnchorPane.topAnchor="250.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXDatePicker defaultColor="#0475ff" layoutX="656.0" layoutY="249.0" prefHeight="25.0" prefWidth="265.0" AnchorPane.leftAnchor="656.0" AnchorPane.topAnchor="249.0" />
+      <Label layoutX="130.0" layoutY="250.0" styleClass="profile" stylesheets="@../main/application.css" text="Sex :" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="250.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cbxGioiTinh" layoutX="236.0" layoutY="249.0" prefHeight="25.0" prefWidth="130.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="249.0" />
+      <Label layoutX="121.0" layoutY="350.0" styleClass="profile" stylesheets="@../main/application.css" text="Email :" AnchorPane.leftAnchor="121.0" AnchorPane.topAnchor="350.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField layoutX="249.0" layoutY="342.0" prefHeight="39.0" prefWidth="677.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="704.0" AnchorPane.topAnchor="342.0">
          <font>
             <Font size="18.0" />
          </font>
       </JFXTextField>
-      <Label layoutX="399.0" layoutY="160.0" text="Birthday : " AnchorPane.topAnchor="160.0">
+      <Label layoutX="120.0" layoutY="550.0" styleClass="profile" stylesheets="@../main/application.css" text="Phone :" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="550.0">
          <font>
-            <Font size="18.0" />
+            <Font size="30.0" />
          </font>
       </Label>
-      <JFXDatePicker defaultColor="#0475ff" layoutX="499.0" layoutY="160.0" AnchorPane.topAnchor="160.0" />
-      <Label layoutX="90.0" layoutY="160.0" text="Sex :" AnchorPane.topAnchor="160.0">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <JFXComboBox layoutX="190.0" layoutY="160.0" prefHeight="25.0" prefWidth="98.0" AnchorPane.topAnchor="160.0" />
-      <Label layoutX="90.0" layoutY="204.0" text="Emal :" AnchorPane.topAnchor="220.0">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <JFXTextField layoutX="190.0" layoutY="184.0" prefHeight="25.0" prefWidth="481.0" AnchorPane.rightAnchor="88.0" AnchorPane.topAnchor="220.0">
+      <JFXTextField layoutX="236.0" layoutY="542.0" prefHeight="39.0" prefWidth="401.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="542.0">
          <font>
             <Font size="18.0" />
          </font>
       </JFXTextField>
-      <Label layoutX="90.0" layoutY="254.0" text="Phone :" AnchorPane.topAnchor="280.0">
+      <Label layoutX="121.0" layoutY="450.0" styleClass="profile" stylesheets="@../main/application.css" text="Address :" AnchorPane.leftAnchor="121.0" AnchorPane.topAnchor="450.0">
          <font>
-            <Font size="18.0" />
+            <Font size="30.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="190.0" layoutY="234.0" prefHeight="25.0" prefWidth="171.0" AnchorPane.topAnchor="280.0">
+      <JFXTextField layoutX="241.0" layoutY="442.0" prefHeight="39.0" prefWidth="677.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="442.0">
          <font>
             <Font size="18.0" />
          </font>
       </JFXTextField>
-      <Label layoutX="90.0" layoutY="297.0" text="Address :" AnchorPane.topAnchor="340.0">
+      <JFXTextField accessibleRole="TEXT" layoutX="14.0" layoutY="20.0" prefColumnCount="6" text="Profile " unFocusColor="WHITE">
          <font>
-            <Font size="18.0" />
+            <Font size="38.0" />
          </font>
-      </Label>
-      <JFXTextField layoutX="190.0" layoutY="334.0" prefHeight="25.0" prefWidth="481.0" AnchorPane.topAnchor="340.0">
+      </JFXTextField>
+      <JFXTextField layoutX="656.0" layoutY="120.0" prefHeight="39.0" prefWidth="265.0" AnchorPane.leftAnchor="656.0" AnchorPane.topAnchor="150.0">
          <font>
             <Font size="18.0" />
          </font>

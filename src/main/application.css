@@ -2,52 +2,86 @@
 .head-background {
 	-fx-background-color: linear-gradient(to left, #fff, #795AF3); 
 }
-.table-view, .tree-table-view {
-    /* Constants used throughout the tableview. */
-    -fx-table-header-border-color: transparent;
-    -fx-table-cell-border-color: -fx-box-border; /* Horizontal Lines*/
-    -fx-background-color: transparent;
+
+/*Style of entire tableView*/
+.table-view{
+    /*-fx-background-color: transparent;*/
+ }
+
+ /*Style of entire tableView when is getting focused*/
+.table-view:focused{
+    /*-fx-background-color: transparent;*/
 }
 
-/* The column header row is made up of a number of column-header, one for each
-   TableColumn, and a 'filler' area that extends from the right-most column
-   to the edge of the tableview, or up to the 'column control' button. */
-.table-view .filler, .tree-table-view .filler, .table-view .column-header,
-.tree-table-view .column-header {
-    -fx-size: 65;
-    -fx-border-style: null;
-    -fx-border-color: -swatch-grey;
-    -fx-border-width: 0 0 2 0;
-    -fx-background-color: transparent;
+/*Style of each column header in the tableView*/
+.table-view .column-header {
+     -fx-background-color: transparent;
+} 
+
+/*Style of each column header's background in the tableView*/
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(#131313 0.0%, #424141 100.0%);
 }
 
-.table-view .show-hide-columns-button, .tree-table-view .show-hide-columns-button
-{
-    -fx-background-color: transparent;
+ /*Style of each column header's label  in the tableView*/
+.table-view .column-header-background .label{
+    -fx-background-color: transparent; 
+    -fx-font-weight: italic;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
 }
 
-.table-view .column-header .label, .table-view .filler .label,
-.table-view .column-drag-header .label, .tree-table-view .column-header .label,
-.tree-table-view .filler .label, .tree-table-view .column-drag-header .label
-{
-    -fx-alignment: CENTER;
+/*Style of each column in the tableView*/
+.table-view .table-column{
+    -fx-alignment:center;
 }
 
-.table-view .column-header-background, .tree-table-view .column-header-background
-{
-    -fx-background-color: transparent;
+ /*Style of each table cell*/
+.table-view .table-cell{
+    -fx-font-size:15px;           /*the font size you asked in the comments below*/
+    /* -fx-text-fill:orange; */
+
 }
 
-.table-row-cell, .tree-table-row-cell {
-    -fx-cell-size: 40px;
+
+/*Style for each <non odd> row of table view*/
+ .table-row-cell{
+    -fx-background-color: white;
+    -fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+    -fx-padding: 0.0em; 
 }
 
-.table-cell {
-    -fx-border-color: transparent; /* Vertical Lines*/
-    -fx-border-width: 1;
+/*Style for each <odd> row of table view*/
+.table-row-cell:odd{
+    -fx-background-color: #f0f5f5;
+    -fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+    -fx-padding: 0.0em;  
 }
 
-.text {
-	-fx-alignment: center;
+
+/*Style of each entire row in the table view*/
+.table-row-cell:selected {
+   /* -fx-border-color:transparent firebrick transparent firebrick  ;
+    -fx-border-width:2.0; */
+    -fx-text-fill: #e60000;
+    -fx-background-color: #cccccc;
+}
+
+
+/*Style of each entire row in the table view when is hovered*/
+.table-row-cell:hover {
+    -fx-background-color: #c0c0c0;
+}
+
+/*Style of each entire row in the table view when is getting focused*/
+.table-row-cell:focused {
+    /*-fx-background-color:purple; */
+}
+.btnLogin{
+	
+}
+
+.profile{
 	-fx-font-family: "Times New Roman";
+	-fx-font-size: 20;
 }
