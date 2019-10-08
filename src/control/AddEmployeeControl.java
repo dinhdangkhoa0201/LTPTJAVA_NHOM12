@@ -7,11 +7,13 @@ import com.jfoenix.controls.JFXButton;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonBar.ButtonData;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 public class AddEmployeeControl implements Initializable{
 	@FXML JFXButton btnCloseWindown;
@@ -36,8 +38,11 @@ public class AddEmployeeControl implements Initializable{
 
 			alert.getButtonTypes().setAll(yesBtn, noBtn);
 
-			if(alert.showAndWait().get() == yesBtn)
-				System.exit(0);
+			if(alert.showAndWait().get() == yesBtn) {
+				Node node = (Node) e.getSource();
+				Stage stage = (Stage) node.getScene().getWindow();
+				stage.close();
+			}
 			else
 				alert.close();
 		}

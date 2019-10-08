@@ -23,7 +23,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class EmployeesControl implements Initializable{
+public class ProjectControl implements Initializable{
 
 	@FXML TableView<Employee> tableEmployees;
 	@FXML TableColumn<Employee, String> col_manv;
@@ -40,7 +40,6 @@ public class EmployeesControl implements Initializable{
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		
 		col_manv.setCellValueFactory(new PropertyValueFactory<>("maNV"));
 		col_ho.setCellValueFactory(new PropertyValueFactory<>("hoNV"));
 		col_ten.setCellValueFactory(new PropertyValueFactory<>("tenNV"));
